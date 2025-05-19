@@ -1,0 +1,22 @@
+Application:
+  Company: "Company"
+  Project: "Nav"
+  ServiceName: "traefik-support"
+  LogLevel: "Debug"
+  Env: "Dev"
+  Cluster: "Local"
+  Host: "127.0.0.1"
+  Port: 10000
+  Domain: "test.traefik.top:9999" #traefik 绑定的域名 （可选）
+  AuthUrl: "http://127.0.0.1:10000/flm/traefik-support/auth" #网关统一认证api
+  Admins:
+    -
+        User: "user1"
+        Password: "$apr1$GhpsZ5SO$haboEVeUCwKBymLd8HUoP/"
+    -
+        User: "user2"
+        Password: "$apr1$GhpsZ5SO$haboEVeUCwKBymLd8HUoP/"
+Etcd:
+  Endpoints:
+    - "8.137.119.140:2379"
+  DialTimeout: 5 #单位：秒
